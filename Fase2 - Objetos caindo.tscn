@@ -1,0 +1,678 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://Fase2 - Objetos caindo.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/Fundo.svg" type="Texture" id=2]
+[ext_resource path="res://Fontes/roboto/Roboto-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://AguaESal.gd" type="Script" id=4]
+[ext_resource path="res://Imagens/água e sal.svg" type="Texture" id=5]
+[ext_resource path="res://AlcoolHidratado.gd" type="Script" id=6]
+[ext_resource path="res://Imagens/álcool hidratado.svg" type="Texture" id=7]
+[ext_resource path="res://ArAtmosferico.gd" type="Script" id=8]
+[ext_resource path="res://Imagens/Ar atmosférico.svg" type="Texture" id=9]
+[ext_resource path="res://AguaEOleo.gd" type="Script" id=10]
+[ext_resource path="res://Imagens/Água e óleo.svg" type="Texture" id=11]
+[ext_resource path="res://SoroFisiologico.gd" type="Script" id=12]
+[ext_resource path="res://Imagens/Soro fisiológico.svg" type="Texture" id=13]
+[ext_resource path="res://Granito.gd" type="Script" id=14]
+[ext_resource path="res://Imagens/Granito.svg" type="Texture" id=15]
+[ext_resource path="res://Laranjada.gd" type="Script" id=16]
+[ext_resource path="res://Imagens/Laranjada.svg" type="Texture" id=17]
+[ext_resource path="res://Leite.gd" type="Script" id=18]
+[ext_resource path="res://Imagens/Leite.svg" type="Texture" id=19]
+[ext_resource path="res://Ouro18Quilates.gd" type="Script" id=20]
+[ext_resource path="res://Imagens/Ouro 18 quilates.svg" type="Texture" id=21]
+[ext_resource path="res://Sangue.gd" type="Script" id=22]
+[ext_resource path="res://Imagens/Sangue.svg" type="Texture" id=23]
+[ext_resource path="res://MisHeterogenea.gd" type="Script" id=24]
+[ext_resource path="res://Imagens/MisHeterogenea.svg" type="Texture" id=25]
+[ext_resource path="res://KinematicBody2D.gd" type="Script" id=26]
+[ext_resource path="res://Imagens/MisHomogenea.svg" type="Texture" id=27]
+[ext_resource path="res://Fontes/roboto/Roboto-Regular.ttf" type="DynamicFontData" id=28]
+[ext_resource path="res://Imagens/Fase1Simbolo.svg" type="Texture" id=29]
+[ext_resource path="res://Fontes/roboto/Roboto-BlackItalic.ttf" type="DynamicFontData" id=30]
+
+[sub_resource type="DynamicFont" id=13]
+
+size = 37
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=14]
+
+default_font = SubResource( 13 )
+
+[sub_resource type="RectangleShape2D" id=15]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[sub_resource type="DynamicFont" id=17]
+
+size = 29
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 28 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Theme" id=18]
+
+default_font = SubResource( 17 )
+
+[sub_resource type="DynamicFont" id=19]
+
+size = 20
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=20]
+
+default_font = SubResource( 19 )
+
+[sub_resource type="DynamicFont" id=21]
+
+size = 25
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 30 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=22]
+
+default_font = SubResource( 21 )
+
+[node name="Fase2 - Objetos caindo" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Fundo" type="Sprite" parent="." index="0"]
+
+position = Vector2( 534.448, 341.31 )
+scale = Vector2( 1.35169, 0.61108 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PainelFinal" type="Panel" parent="Fundo" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -180.0
+margin_top = -269.0
+margin_right = 201.0
+margin_bottom = 104.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Label" type="Label" parent="Fundo/PainelFinal" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 85.0
+margin_top = 26.0
+margin_right = 281.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 14 )
+text = "Pontuação:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="lblPont" type="Label" parent="Fundo/PainelFinal" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 77.0
+margin_top = 123.0
+margin_right = 282.0
+margin_bottom = 211.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 14 )
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme" ]
+
+[node name="AguaESal" type="Area2D" parent="Fundo" index="1"]
+
+editor/display_folded = true
+position = Vector2( -183.66, -3134.86 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/AguaESal" index="0"]
+
+position = Vector2( 61.5, 66 )
+scale = Vector2( 5.73077, 6.07692 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/AguaESal" index="1"]
+
+position = Vector2( 128.41, 47.1577 )
+scale = Vector2( 0.438624, 0.335712 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AlcoolHidratado" type="Area2D" parent="Fundo" index="2"]
+
+editor/display_folded = true
+position = Vector2( 91.666, -6351.39 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/AlcoolHidratado" index="0"]
+
+position = Vector2( 61.5, 66 )
+scale = Vector2( 5.73077, 6.07692 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/AlcoolHidratado" index="1"]
+
+position = Vector2( 128.41, 47.1577 )
+scale = Vector2( 0.438624, 0.335712 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ArAtmosferico" type="Area2D" parent="Fundo" index="3"]
+
+editor/display_folded = true
+position = Vector2( -136.683, -1602.51 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/ArAtmosferico" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/ArAtmosferico" index="1"]
+
+position = Vector2( 154.733, -17.3384 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AguaEOleo" type="Area2D" parent="Fundo" index="4"]
+
+editor/display_folded = true
+position = Vector2( -45.4252, -3913.12 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/AguaEOleo" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/AguaEOleo" index="1"]
+
+position = Vector2( 154.733, -17.3384 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="SoroFisiologico" type="Area2D" parent="Fundo" index="5"]
+
+editor/display_folded = true
+position = Vector2( -155.458, -5527.54 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/SoroFisiologico" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/SoroFisiologico" index="1"]
+
+position = Vector2( 130.179, 29.3156 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Granito" type="Area2D" parent="Fundo" index="6"]
+
+editor/display_folded = true
+position = Vector2( -65.237, -806.844 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/Granito" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/Granito" index="1"]
+
+position = Vector2( 139.789, -10.1899 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Laranjada" type="Area2D" parent="Fundo" index="7"]
+
+editor/display_folded = true
+position = Vector2( -50.191, -7977.35 )
+scale = Vector2( 0.776322, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/Laranjada" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/Laranjada" index="1"]
+
+position = Vector2( 147.155, -45.7943 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Leite" type="Area2D" parent="Fundo" index="8"]
+
+editor/display_folded = true
+position = Vector2( -127.607, -4714.01 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/Leite" index="0"]
+
+position = Vector2( 96.5743, 65.25 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/Leite" index="1"]
+
+position = Vector2( 147.155, -45.7943 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 19 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ouro18Quilates" type="Area2D" parent="Fundo" index="9"]
+
+editor/display_folded = true
+position = Vector2( -98.6247, -7083.23 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/Ouro18Quilates" index="0"]
+
+position = Vector2( 95.2137, 70.6915 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/Ouro18Quilates" index="1"]
+
+position = Vector2( 152.597, -4.98303 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 21 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sangue" type="Area2D" parent="Fundo" index="10"]
+
+editor/display_folded = true
+position = Vector2( -6.96484, -2285.04 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+audio_bus_override = false
+audio_bus_name = "Master"
+script = ExtResource( 22 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/Sangue" index="0"]
+
+position = Vector2( 11.7046, 38.958 )
+scale = Vector2( 8.42879, 6.01923 )
+shape = SubResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/Sangue" index="1"]
+
+position = Vector2( 40.6943, -38.3867 )
+scale = Vector2( 0.396512, 0.340175 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MisHeterogenea" type="KinematicBody2D" parent="Fundo" index="11"]
+
+position = Vector2( 159.725, 143.172 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 24 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/MisHeterogenea" index="0"]
+
+position = Vector2( 26.3696, 71.1119 )
+scale = Vector2( 9.10613, 5.88231 )
+shape = SubResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/MisHeterogenea" index="1"]
+
+position = Vector2( 28.061, 194.778 )
+scale = Vector2( 0.471013, 0.453122 )
+texture = ExtResource( 25 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="MisHomogenea" type="KinematicBody2D" parent="Fundo" index="12"]
+
+editor/display_folded = true
+position = Vector2( -219.617, 131.647 )
+scale = Vector2( 0.715572, 1.70209 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 26 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fundo/MisHomogenea" index="0"]
+
+position = Vector2( 15.8256, 83.7578 )
+scale = Vector2( 8.73638, 6.28318 )
+shape = SubResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Fundo/MisHomogenea" index="1"]
+
+position = Vector2( 61.5352, -52.387 )
+scale = Vector2( 0.471013, 0.453122 )
+texture = ExtResource( 27 )
+_sections_unfolded = [ "Transform" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lblAcertados" type="Label" parent="Fundo" index="13"]
+
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0.897308, 0.914612, 0.949219, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -389.0
+margin_top = -540.0
+margin_right = -243.0
+margin_bottom = -503.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 18 )
+text = "Acertados:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors" ]
+
+[node name="Qtd" type="Label" parent="Fundo" index="14"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -240.0
+margin_top = -530.0
+margin_right = -184.0
+margin_bottom = -493.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 20 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility", "custom_fonts" ]
+
+[node name="SimboloFase1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 967.787, 137.739 )
+scale = Vector2( 0.620949, 0.614587 )
+texture = ExtResource( 29 )
+
+[node name="lbl1" type="Label" parent="SimboloFase1" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -16.0
+margin_top = -76.0
+margin_right = 4.0
+margin_bottom = -38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 18 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors" ]
+
+[node name="Button" type="Button" parent="." index="2"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 9.0
+margin_top = 44.0
+margin_right = 122.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 22 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Menu"
+flat = true
+align = 1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[connection signal="body_entered" from="Fundo/AguaESal" to="Fundo/AguaESal" method="_on_AguaESal_body_entered"]
+
+[connection signal="body_entered" from="Fundo/AlcoolHidratado" to="Fundo/AlcoolHidratado" method="_on_AlcoolHidratado_body_entered"]
+
+[connection signal="body_entered" from="Fundo/ArAtmosferico" to="Fundo/ArAtmosferico" method="_on_ArAtmosferico_body_entered"]
+
+[connection signal="body_entered" from="Fundo/AguaEOleo" to="Fundo/AguaEOleo" method="_on_AguaEOleo_body_entered"]
+
+[connection signal="body_entered" from="Fundo/SoroFisiologico" to="Fundo/SoroFisiologico" method="_on_SoroFisiologico_body_entered"]
+
+[connection signal="body_entered" from="Fundo/Granito" to="Fundo/Granito" method="_on_Granito_body_entered"]
+
+[connection signal="body_entered" from="Fundo/Laranjada" to="Fundo/Laranjada" method="_on_Laranjada_body_entered"]
+
+[connection signal="body_entered" from="Fundo/Leite" to="Fundo/Leite" method="_on_Leite_body_entered"]
+
+[connection signal="body_entered" from="Fundo/Ouro18Quilates" to="Fundo/Ouro18Quilates" method="_on_Ouro18Quilates_body_entered"]
+
+[connection signal="body_shape_entered" from="Fundo/Sangue" to="Fundo/Sangue" method="_on_Sangue_body_shape_entered"]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+

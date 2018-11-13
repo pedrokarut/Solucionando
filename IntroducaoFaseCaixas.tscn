@@ -1,0 +1,142 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Imagens/Fundo.svg" type="Texture" id=1]
+[ext_resource path="res://Fontes/roboto/Roboto-Bold.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Button.gd" type="Script" id=3]
+[ext_resource path="res://Fontes/roboto/Roboto-LightItalic.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Imagens/Fase1Simbolo.svg" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 39
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=2]
+
+default_font = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 23
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=4]
+
+default_font = SubResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 42
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Theme" id=6]
+
+default_font = SubResource( 5 )
+
+[node name="IntroFaseCaixa" type="Node" index="0"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 492.159, 69.1976 )
+scale = Vector2( 1.40826, 0.996046 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="Sprite" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 173.0
+margin_top = 417.0
+margin_right = 361.0
+margin_bottom = 500.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+theme = SubResource( 2 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Começar"
+flat = false
+align = 1
+script = ExtResource( 3 )
+_sections_unfolded = [ "Theme" ]
+
+[node name="Label" type="Label" parent="Sprite" index="1"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -337.0
+margin_top = -43.0
+margin_right = 396.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 4 )
+text = "Solução é uma mistura homogênea, ou seja, apresenta uma única fase 
+enquanto que uma mistura heterogênea apresenta duas ou mais fases. 
+Com base nesses conhecimentos coloque as misturas na caixa correta."
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="Sprite" index="2"]
+
+position = Vector2( -289.418, 442.952 )
+scale = Vector2( 0.509569, 0.688936 )
+texture = ExtResource( 5 )
+
+[node name="Label2" type="Label" parent="Sprite/Sprite" index="0"]
+
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -16.0
+margin_top = -98.0
+margin_right = 24.0
+margin_bottom = -64.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+theme = SubResource( 6 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Theme", "Visibility" ]
+
+[connection signal="pressed" from="Sprite/Button" to="Sprite/Button" method="_on_Button_pressed"]
+
+
